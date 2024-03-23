@@ -6,9 +6,22 @@ package com.mycompany.week8_skeletoncode_lab;
 
 /**
  *
- * @author MoaathAlrajab
+ * @author MoaathAlrajab, JaredTobias
  */
 public class BinarySearch {
+
+    // main method to call algorithm
+    public static void main(String[] args) {
+        int[] array = {1,2,3,4,5,6,7,8,9}; // example of an array
+
+        int index = runBinarySearchIteratively(array, 5, 0, array.length - 1); // method call
+
+        // print statements if binary search found element
+        if (index != -1)
+            System.out.println("Key found at index: " + index);
+        else
+            System.out.println("Key not found in array");
+    }
 
     public static int runBinarySearchIteratively (int[] sortedArray, int key, int low, int high) {
         int index = Integer.MAX_VALUE;
@@ -26,7 +39,13 @@ public class BinarySearch {
         }
         return index;
     }
-    //ToDo 2: Call the above method and test the algorithm  
-    // provide time and space analysis 
-
 }
+
+// Time and Space Analysis
+
+// The time complexity is O(log(n)) because as each time the algorithm executes,
+// the amount of comparisons it needs to make to find the number is reduced in half,
+// henceforth the algorithm the time needed to find the number growing logarithmically.
+
+// The space complexity is O(1) because the input is constant as the array
+// maintains its size. The algorithm does not change the size of the array.
