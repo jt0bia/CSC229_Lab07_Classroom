@@ -10,8 +10,7 @@ package com.mycompany.week8_skeletoncode_lab;
  */
 public class BinarySearch {
 
-    public static int runBinarySearchIteratively(
-            int[] sortedArray, int key, int low, int high) {
+    public static int runBinarySearchIteratively (int[] sortedArray, int key, int low, int high) {
         int index = Integer.MAX_VALUE;
 
         while (low <= high) {
